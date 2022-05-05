@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 40px;
+  padding:100px; 
+}
+.container {
+  position: relative;
+  display: inline-flex;
+  margin: 40px auto; 
+  padding: 20px auto;
+  font-size: 2rem;  
+}
+
+.tooltip .tooltiptext {
+  font-size: 1rem;
+  visibility: hidden;
+  width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  padding:20px;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  top: -90px;
+  left: -30%; 
+}
+
+

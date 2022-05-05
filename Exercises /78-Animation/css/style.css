@@ -1,0 +1,57 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body{ 
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  min-height: 100vh;
+  display:grid;
+  place-content: center;
+  text-align: center;
+  background-color: azure;
+}
+
+h1 {
+  position:relative;
+  font-size: 2rem;
+  width: max-content;
+}
+
+h1::before, 
+h1::after{
+  content:"";
+  position: absolute;
+  top:0;
+  right:0;
+  bottom: 0;
+  left: 0;
+}
+
+h1::before {
+  background: azure;
+  animation: typewriter 4s steps(25) forwards;
+}
+h1::after {
+  width: 0.125em;
+  background: black;
+  animation: typewriter 4s steps(25) forwards;
+}
+
+@keyframes typewriter {
+  to {
+    left:100%
+  }
+}
+
+.subtitle{
+  color: hs1(0 0 0 / 0.7);
+  font-size: 1rem;
+  font-weight: 400;
+}

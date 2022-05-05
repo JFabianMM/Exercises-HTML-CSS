@@ -1,0 +1,59 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+.rate {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+
+}
+
+div {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+div h2 {
+  font-size: 40px;
+  font-weight: normal;
+  color: blue;
+}
+
+
+.rate:not(:checked) > input {
+    display:none;
+}
+
+.rate:not(:checked) > input:last-child {
+  display:inline-block;
+  position: relative;
+  left: -30px;
+  top: 20px;
+  padding:20px;
+ 
+}
+
+.rate:not(:checked) > label {
+    cursor:pointer;
+    font-size:50px;   
+}
+
+.rate:not(:checked) > label:before {
+    content: '★';
+}
+
+
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate > input:hover ~ label {
+  color: #ffc700;    
+}
+

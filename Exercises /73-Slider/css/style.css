@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+div {
+    margin: auto;
+    width: 500px;
+    height: 300px;
+    
+}
+
+div ul li {
+    list-style: none;
+    opacity:0;
+}
+
+ul {
+    animation: slide 6s infinite;
+    width: 500px;
+    height: 300px;
+
+}
+
+
+@keyframes slide{
+    /*
+    33%{
+        background: url(../img/b.jpg);
+        background-size: 100% 100%;
+        }
+    66%{
+        background: url(../img/c.jpg);
+        background-size: 100% 100%;
+    }
+    100%{
+        background: url(../img/a.jpg);
+        background-size: 100% 100%;
+    }
+   */
+    0%{
+        background: url(../img/a.jpg);
+        background-size: 100% 100%;
+        }
+    25%{
+        background: url(../img/b.jpg);
+        background-size: 100% 100%;
+    }
+    50%{
+        background: url(../img/c.jpg);
+        background-size: 100% 100%;
+    }
+    75%{
+        background: url(../img/d.jpg);
+        background-size: 100% 100%;
+        }
+    100%{
+        background: url(../img/a.jpg);
+        background-size: 100% 100%;
+        }
+}
