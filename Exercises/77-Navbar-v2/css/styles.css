@@ -1,0 +1,240 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+nav{
+    background: rgb(66, 66, 138);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+label.logo {
+    color:white;
+    font-size: 30px;
+    line-height: 70px;
+    padding: 0 0 80px 40px;
+}
+
+
+
+nav ul li {
+    display:inline-block;
+    line-height: 70px;
+    margin: 0 20px;
+}
+
+nav ul li a{
+    background: rgb(66, 66, 138);
+    color:white;
+    padding:7px 13px;
+    border-radius: 5px;
+    
+}
+
+
+nav ul li:first-child a, nav ul li a:hover{
+    color:rgb(208, 203, 203);
+    transition:0.5s;
+    background: rgb(137, 120, 154);
+}
+.checkbtn, .checkrightbtn, .checkleftbtn {
+    font-size: 24px;
+    color: white;
+    float:right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor:pointer;
+    display:none;
+}
+
+#top, #bottom, #left{
+    display:none;
+}
+
+.sub-menu-1 {
+    display:none;
+}
+
+
+ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover .sub-menu-1 ul li a:hover {
+    color: white;
+}
+
+ul{
+    position:fixed;
+    width:100%;
+    height:80px;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+
+nav ul li{
+    display:block;
+
+}
+
+nav{
+    position: absolute;
+    background: rgb(66, 66, 138);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+ul li:hover .sub-menu-1 {
+    display:flex;
+    position: absolute;
+    margin-top: -70px;
+    margin-left: 50%;
+}
+
+ul li:hover .sub-menu-1 ul {
+    position:relative;
+    display:flex;
+    flex-direction: column;
+    display:column;
+    margin:0px;
+    top: -20%;
+    left: 50px;
+}
+
+ul li:hover .sub-menu-1 ul li {
+    width: 100px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 5px;
+    text-align: left;
+    height: 50px;
+    line-height: 50px;
+    margin: 0px;
+}
+
+ul li:hover .sub-menu-1 ul li:last-child {
+    border-bottom: none;
+}
+
+ul li:hover .sub-menu-1 ul li a:hover {
+    color: white;
+}
+
+.checkbtn {
+    display:block;
+}
+.checkrightbtn {
+    display:block;
+}
+
+.checkleftbtn {
+    display:block;
+}
+
+
+#top:checked ~ ul{
+    position: absolute;
+    background-color: rgb(201, 201, 239);
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width:100%;
+    top: 70px;
+    text-align: center;
+}
+
+#top:checked ~ ul li:hover .sub-menu-1 {
+    display:flex;
+    position: relative;
+}
+
+
+#top:checked ~ ul li:hover .sub-menu-1 ul {
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    left: -40px;
+    top: 40px;
+}
+
+#top:checked ~ ul li:hover .sub-menu-1 ul li {
+    position: relative;
+    width: 100px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 5px;
+    text-align: left;
+
+}
+
+#left:checked ~ ul{ 
+    background-color: rgb(201, 201, 239);
+    display:flex;
+    flex-direction: column;
+    width:140px;
+    height:100vh;
+    left: 0px;
+    text-align: left;
+} 
+
+#bottom:checked ~ ul{
+    background-color: rgb(201, 201, 239);
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width:100%;
+    height:70px;
+    position: fixed;
+    bottom: 0;
+
+} 
+
+#bottom:checked ~ ul li:hover .sub-menu-1 {
+    display:flex;
+    position: relative;
+}
+
+#bottom:checked ~ ul li:hover .sub-menu-1 ul {
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    left: -40px;
+    bottom: 150px;
+}
+
+#bottom:checked ~ ul li:hover .sub-menu-1 ul li {
+    position: relative;
+    width: 100px;
+    padding: 10px;
+    border-bottom: 1px dotted white;
+    background: transparent;
+    border-radius: 5px;
+    text-align: left;
+}
+
+
+

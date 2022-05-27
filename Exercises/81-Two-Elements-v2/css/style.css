@@ -1,0 +1,44 @@
+
+html {
+    box-sizing: content-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+  nav ul {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    width: 800px;
+    height: 200px;
+    list-style-type: none;
+    border: 2px solid rgb(183, 183, 221);
+    padding: 0px;
+    margin-top: 50px;
+    align-content: center;
+    overflow-y: scroll;
+  }
+
+  nav li {
+    background-color: rgb(202, 195, 195);
+    text-align: center;
+    height: 100px;
+    margin: 0px;
+    border:2px solid blueviolet;
+  }
+ 
+  nav li:nth-child(1) {
+    grid-column: 1/2;
+    padding: 10px;
+    width: 100%;
+  }
+
+  nav li:nth-child(2) {
+    grid-column: 2/3;
+    padding: 10px;
+    width: 100%;
+  }
+   
